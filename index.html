@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <title>Document</title>
+</head>
+
+<body>
+      <div class="container" id="app">
+            <div id="menudivleft">
+                  <h1 class="goright title">
+                        TOKYO
+                  </h1>
+                  <ul id="infolist" class="goright">
+                        <li>
+                              <a href="">Home</a>
+                        </li>
+                        <li>
+                              <a href="">About</a>
+                        </li>
+                        <li>
+                              <a href="">Service</a>
+                        </li>
+                        <li>
+                              <a href="">Portfolio</a>
+                        </li>
+                        <li>
+                              <a href="">News</a>
+                        </li>
+                        <li>
+                              <a href="">Contact</a>
+                        </li>
+                  </ul>
+                  <ul class="goright">
+                        <li>
+                              2022 Tokyo
+                        </li>
+                        <li>
+                              Created by Marketify
+                        </li>
+                  </ul>
+            </div>
+            <div id="menudivtop">
+                  <h1 id="headmenutop" class="title">Tokyo</h1>
+                  <div  id="headmenubutton" @click="openMenu()">
+                       <span id="span0" :class=" {'menubutton' : true,'active' : isClicked}"></span>
+                       <span id="span1" :class=" {'menubutton' : true,'active' : isClicked}"></span>
+                       <span id="span2" :class=" {'menubutton' : true,'active' : isClicked}"></span>
+                  </div>
+            </div>
+            <div id="aboutdiv">
+                  <div class="godown" id="itemsaboutdiv">
+                        <img src="assets/1.jpg" id="avatar">
+                        <div id="about">
+                              <p id="user">ADRIANO SMITH</p>
+                              <p id="job">I am a WordPress Developer at heart and create features that are best suited
+                                    for the job at hand</p>
+                              <div id="socialmedia">
+                                    <ul id="icons">
+                                          <li>
+                                                <img src="assets/facebook.png" style="width: 20px; height: 20px;">
+                                          </li>
+                                          <li>
+                                                <img src="assets/twitter.png" class="makeicons">
+                                          </li>
+                                          <li>
+                                                <img src="assets/behance.png" class="makeicons">
+                                          </li>
+                                          <li >
+                                                <img src="assets/linkedin.png" class="makeicons">
+                                          </li>
+                                    </ul>
+                              </div>
+                        </div>
+
+                  </div>
+
+                  <div id="itemsdivtop"  :class="{'menuopen' : isClicked,'menuclose' : !isClicked}">
+                        <ul>
+                              <li>
+                                    <a href="">Home</a>
+                              </li>
+                              <li>
+                                    <a href="">About</a>
+                              </li>
+                              <li>
+                                    <a href="">Service</a>
+                              </li>
+                              <li>
+                                    <a href="">Portfolio</a>
+                              </li>
+                              <li>
+                                    <a href="">News</a>
+                              </li>
+                              <li>
+                                    <a href="">Contact</a>
+                              </li>
+                        </ul>
+                  </div>
+
+            </div>
+      </div>
+      <script src="app.js"></script>
+</body>
+
+</html>

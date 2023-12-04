@@ -1,0 +1,243 @@
+html{
+      height: 100%;
+      width: 100%;
+      min-width: 210px;
+      background-color: #494b50;
+}
+
+body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      user-select: none;
+      background-color: #494b50;
+}
+
+.container{
+      display: flex;
+      height: 100%;
+      width: 100%;
+}
+.title{
+      color :#fff;
+      font-weight: 900;
+      font-family: poppins;
+      font-size: 25px;
+      letter-spacing: 4px;
+}
+#menudivleft{
+      background-color: #494b50;
+      display: flex;
+      flex-direction: column;
+      width: 550px;
+      height: 100%;
+      justify-content: center;
+}
+
+.goright{
+      margin-left: 18%;
+}
+#menudivleft * li{
+      font-weight: 500;
+      
+}
+#aboutdiv{
+      width: 100%;
+      height: 100%;
+      background-color: #34353a;
+      display: flex;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+}
+#menudivtop{
+      display: none;
+      height: 50px;
+      width: 100%;
+      align-items: center;
+      background-color: #494b50;
+      gap: 71%;
+}
+#headmenubutton{
+      display: flex;
+      flex-direction: column;
+}
+.menubutton{
+     display: block;
+     width: 25px;
+     height: 3px;
+     margin: 5px auto;
+     -webkit-transition: all 0.3s ease; 
+     transition: all 0.3 ease;
+     background-color: white;
+}
+.menubutton.active:nth-child(2){
+      opacity: 0;
+}
+.menubutton.active:nth-child(1){
+      transform: translateY(8px)rotate(45deg);
+}
+.menubutton.active:nth-child(3){
+      transform: translateY(-18px)rotate(-45deg);
+}
+#itemsdivtop{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      background-color: #494b50;
+      right: 0;
+      top: 0px;
+      min-height: 100%;
+      overflow: hidden;
+      z-index: 1;
+}
+.menuopen {
+      animation: 1s come forwards ease-in-out;
+}
+@keyframes come{
+      0%{width: 0%;}
+      100% {width: 14em;}
+}
+.menuclose{
+      animation: 1s goaway forwards ease-in-out;
+}
+@keyframes goaway {
+      0%{width: 14em;}
+      100%{width: 0%;}
+}
+#about{
+      margin-left: 4%;
+}
+#avatar{
+      width: 350px;
+      height: 250px;
+      animation: awkwardborder 10s ease-in-out infinite;
+     
+}
+@keyframes awkwardborder {
+      0%{
+            border-radius: 40% 70% 90% 60%;
+      }
+      50%{
+            border-radius : 90% 60% 40% 70%;
+      }
+      100%{
+            border-radius: 40% 70% 90% 60%;
+      }
+}
+#job{
+      flex-wrap: wrap;
+      word-wrap: break-word;
+      line-height: 30px;
+      max-width: 400px;
+}
+#itemsaboutdiv{
+      display: flex;
+      align-items: center;
+}
+#user{
+      flex-wrap: wrap;
+      font-size: 45px;
+      word-wrap: break-word;
+}
+#socialmedia *{
+      display: flex;     
+      justify-content: center;
+}
+
+.makeicons{
+      width: 20px;
+      height: 20px;
+}
+#icons{     
+      justify-content: space-evenly;
+}
+li{
+      line-height: 30px;
+      color: #bbb;
+      list-style-type: none;
+      font-family: montserrat;
+}
+a{
+      color: #bbb;
+      text-decoration: none;
+}
+li a:hover {
+      color: white;
+}
+#about{
+      display: flex;
+      flex-direction: column;
+}
+
+
+
+
+@media screen and (max-width: 1600px){
+      #menudivleft{
+            width: 350px;      
+      }
+}
+@media screen and (max-width: 1200px){
+      #menudivleft{
+            display: none;
+      }
+      #menudivtop{
+            display: flex;
+            justify-content: center;
+            
+      }
+      .container{
+            flex-direction: column;
+      }
+}
+@media screen and (max-width :1040px) {
+      #itemsaboutdiv{
+            flex-direction: column;
+      }
+      #user{
+            text-align: center;
+      }
+      
+}
+@media screen and (max-width : 780px){
+      #user{
+            font-size: 35px;
+      }
+}
+@media screen and (max-width : 746px){
+     #menudivtop{
+      gap: 60%;
+     }
+}
+@media screen and (max-width : 505px){
+      #avatar{
+            width: 300px;
+            height: 200px;
+      }
+      #user{
+            font-size: 28px;
+      }
+      #menudivtop{
+            gap: 50%;
+      }     
+}
+@media screen and (max-width : 390px){
+      
+      #avatar{
+            
+            width: 200px;
+            height: 130px;
+      }
+}
+@media screen and (max-width : 312px){
+      #menudivtop{
+            gap :25%;
+      }
+      #avatar{
+            
+            width: 160px;
+            height: 90px;
+      }
+}
